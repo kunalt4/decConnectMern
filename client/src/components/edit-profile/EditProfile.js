@@ -7,7 +7,7 @@ import TextFieldGroup from "../common/TextFieldGroup";
 import TextAreaFieldGroup from "../common/TextAreaFieldGroup";
 import InputGroup from "../common/InputGroup";
 import SelectListGroup from "../common/SelectListGroup";
-import { createProfile, getCurrentProfle } from "../../actions/profileAction";
+import { createProfile, getCurrentProfile } from "../../actions/profileAction";
 import isEmpty from "../../validation/is-empty";
 
 export class EditProfile extends Component {
@@ -33,7 +33,7 @@ export class EditProfile extends Component {
   }
 
   componentDidMount() {
-    this.props.getCurrentProfle();
+    this.props.getCurrentProfile();
   }
 
   componentWillReceiveProps(nextProps) {
@@ -320,7 +320,7 @@ EditProfile.propTypes = {
   profile: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
   createProfile: PropTypes.func.isRequired,
-  getCurrentProfle: PropTypes.func.isRequired
+  getCurrentProfile: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
@@ -330,5 +330,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { createProfile, getCurrentProfle }
+  { createProfile, getCurrentProfile }
 )(withRouter(EditProfile));

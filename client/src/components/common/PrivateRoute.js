@@ -20,7 +20,7 @@ const PrivateRoute = ({ component: Component, auth, ...rest }) => {
 
 PrivateRoute.propTypes = {
   auth: PropTypes.object.isRequired
-  // getCurrentProfle: PropTypes.func.isRequired,
+  // getCurrentProfile: PropTypes.func.isRequired,
   // profile: PropTypes.object.isRequired
 };
 

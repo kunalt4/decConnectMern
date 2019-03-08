@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
-import { getCurrentProfle, deleteAccount } from "../../actions/profileAction";
+import { getCurrentProfile, deleteAccount } from "../../actions/profileAction";
 import Spinner from "../common/Spinner";
 import ProfileActions from "./ProfileActions";
 import Experience from "./Experience";
@@ -10,7 +10,7 @@ import Education from "./Education";
 
 class Dashboard extends Component {
   componentDidMount() {
-    this.props.getCurrentProfle();
+    this.props.getCurrentProfile();
   }
 
   onDeleteClick = e => {
@@ -70,7 +70,7 @@ class Dashboard extends Component {
 }
 Dashboard.propTypes = {
   auth: PropTypes.object.isRequired,
-  getCurrentProfle: PropTypes.func.isRequired,
+  getCurrentProfile: PropTypes.func.isRequired,
   deleteAccount: PropTypes.func.isRequired,
   profile: PropTypes.object.isRequired
 };
@@ -82,5 +82,5 @@ const mapStateToProps = state => ({
 
 export default connect(
   mapStateToProps,
-  { getCurrentProfle, deleteAccount }
+  { getCurrentProfile, deleteAccount }
 )(Dashboard);
