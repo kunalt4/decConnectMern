@@ -8,5 +8,6 @@ This project combines the following stack, to build a simple web app :
 * MongoDB
 * Express.js
 * ReactJS
+* Redux
 * NodeJS
 * Heroku and Git
